@@ -47,7 +47,9 @@ insert into product values(101,'Motherboard',3200.00,15),
 select * from product where PRO_PRICE between 200.0 and 600.0;
 
 4.
-select PRO_NAME,PRO_PRICE from product where PRO_PRICE>=550;
+select PRO_NAME,PRO_PRICE from product
+where PRO_PRICE>=550 
+order by PRO_PRICE desc, PRO_NAME asc;
 
 5.
 create table orders(ord_no int, purch_amt float, ord_date date, customer_id int, salesman_id int);
